@@ -39,6 +39,8 @@ const profile: QueryResolvers["profile"] = () => {
   return {
     id: "dqn",
     name: "dqn",
+    bio: "Software Engineer",
+    avatarUrl: "https://avatars.githubusercontent.com/u/30195678",
     pronouns: "he/him",
     birthday: "1998-10-06",
     email: "dqn270@gmail.com",

@@ -15,6 +15,8 @@ export const typeDefs = `#graphql
   type Profile {
     id: ID!
     name: String!
+    bio: String!
+    avatarUrl: String!
     pronouns: String!
     birthday: String!
     email: String!

@@ -36,6 +36,8 @@ export type Link = {
 
 export type Profile = {
   readonly __typename?: "Profile";
+  readonly avatarUrl: Scalars["String"];
+  readonly bio: Scalars["String"];
   readonly birthday: Scalars["String"];
   readonly company?: Maybe<Company>;
   readonly email: Scalars["String"];
@@ -211,6 +213,8 @@ export type ProfileResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes["Profile"] = ResolversParentTypes["Profile"]
 > = ResolversObject<{
+  avatarUrl?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
+  bio?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   birthday?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   company?: Resolver<Maybe<ResolversTypes["Company"]>, ParentType, ContextType>;
   email?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
