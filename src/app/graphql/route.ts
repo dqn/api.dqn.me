@@ -7,7 +7,37 @@ import {
   QueryResolvers,
   Resolvers,
 } from "../../generated/graphql";
-import { readFileSync } from "fs";
+
+const typeDefs = `#graphql
+  type Company {
+    id: ID!
+    name: String!
+    businesses: [String!]!
+    website: String!
+  }
+
+  type Link {
+    id: ID!
+    name: String!
+    url: String!
+  }
+
+  type Profile {
+    id: ID!
+    name: String!
+    pronouns: String!
+    birthday: String!
+    email: String!
+    company: Company
+    location: String!
+    loves: [String!]!
+    links: [Link!]!
+  }
+
+  type Query {
+    profile: Profile!
+  }
+`;
 
 const profile: QueryResolvers["profile"] = () => {
   const company: Company = {
@@ -60,7 +90,7 @@ const resolvers: Resolvers = {
 };
 
 const server = new ApolloServer({
-  typeDefs: readFileSync("./src/schema.graphql", "utf8"),
+  typeDefs,
   resolvers,
 });
 
