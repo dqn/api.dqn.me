@@ -4,7 +4,7 @@
 
 ## Schema
 
-See [typeDefs.ts](https://github.com/dqn/api.dqn.me/blob/main/src/app/graphql/typeDefs.ts)
+See [schema.graphql](https://github.com/dqn/api.dqn.me/blob/main/src/schema.graphql)
 
 ## Usage
 
