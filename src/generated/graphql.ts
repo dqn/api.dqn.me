@@ -248,3 +248,36 @@ export type Resolvers<ContextType = any> = ResolversObject<{
   Profile?: ProfileResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
 }>;
+
+export const typeDefs = /* GraphQL */ `
+  type Company {
+    businesses: [String!]!
+    id: ID!
+    name: String!
+    website: String!
+  }
+
+  type Link {
+    id: ID!
+    name: String!
+    url: String!
+  }
+
+  type Profile {
+    avatarUrl: String!
+    bio: String!
+    birthday: String!
+    company: Company
+    email: String!
+    id: ID!
+    links: [Link!]!
+    location: String!
+    loves: [String!]!
+    name: String!
+    pronouns: String!
+  }
+
+  type Query {
+    profile: Profile!
+  }
+`;

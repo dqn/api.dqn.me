@@ -1,8 +1,8 @@
 import { ApolloServer } from "@apollo/server";
 import assert from "assert";
 import { NextResponse } from "next/server";
-import { typeDefs } from "./typeDefs";
 import { resolvers } from "./resolvers";
+import { typeDefs } from "../../generated/graphql";
 
 const server = new ApolloServer({
   typeDefs,
