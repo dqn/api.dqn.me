@@ -27,7 +27,7 @@ const profile: QueryResolvers["profile"] = () => {
     {
       id: "twitter",
       name: "Twitter",
-      url: "https://github.com/dqn",
+      url: "https://twitter.com/dqn270",
     },
     {
       id: "zenn",
