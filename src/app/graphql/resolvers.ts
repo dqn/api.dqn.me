@@ -1,18 +1,6 @@
-import {
-  Company,
-  Link,
-  QueryResolvers,
-  Resolvers,
-} from "../../generated/graphql";
+import { Link, QueryResolvers, Resolvers } from "../../generated/graphql";
 
 const profile: QueryResolvers["profile"] = () => {
-  const company: Company = {
-    id: "pamxy",
-    name: "pamxy, Inc.",
-    businesses: ["IP", "marketing", "commerce"],
-    website: "https://pamxy.co.jp",
-  };
-
   const links: Link[] = [
     {
       id: "homepage",
@@ -44,7 +32,7 @@ const profile: QueryResolvers["profile"] = () => {
     pronouns: "he/him",
     birthday: "1998-10-06",
     email: "dqn270@gmail.com",
-    company,
+    company: null,
     location: "Tokyo, Japan",
     loves: ["Web", "TypeScript", "React / Next.js"],
     links,
