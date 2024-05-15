@@ -13,8 +13,8 @@ const profile: QueryResolvers["profile"] = () => {
       url: "https://github.com/dqn",
     },
     {
-      id: "twitter",
-      name: "Twitter",
+      id: "x",
+      name: "X",
       url: "https://twitter.com/dqn270",
     },
     {
